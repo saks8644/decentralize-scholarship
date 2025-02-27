@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decentralized Scholarships - FairChain</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        @keyframes chainFlow {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0%); }
+        }
+        
+        .blockchain-bg {
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 25px,
+                rgba(0, 188, 212, 0.1) 25px,
+                rgba(0, 188, 212, 0.1) 50px
+            );
+            animation: chainFlow 40s linear infinite;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .block-glow {
+            box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body class="relative overflow-x-hidden bg-gray-50 font-[Inter]">
+
+    <!-- Blockchain Background Animation -->
+    <div class="fixed inset-0 z-0 blockchain-bg bg-gradient-to-br from-blue-100 to-teal-100 animate-pulse"></div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-lg shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <img src="logo.svg" alt="FairChain" class="h-12 w-auto">
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-blue-800 hover:text-blue-600 font-semibold transition-colors">Home</a>
+                <a href="#about" class="text-blue-800 hover:text-blue-600 font-semibold transition-colors">About</a>
+                <a href="#scholarships" class="text-blue-800 hover:text-blue-600 font-semibold transition-colors">Scholarships</a>
+                <a href="#apply" class="bg-gradient-to-r from-blue-600 to-teal-400 text-white px-6 py-2 rounded-full shadow hover:scale-105 transition-transform">Apply Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative z-10 min-h-screen flex items-center justify-center">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-8 animate-float bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-400 bg-clip-text text-transparent">
+                Decentralized Scholarships
+            </h1>
+
+            <!-- Live Stats -->
+            <div class="flex justify-center gap-6 mb-12">
+                <div class="p-6 rounded-2xl backdrop-blur-xl shadow-lg bg-white/80 transform hover:scale-105 transition">
+                    <div class="text-3xl font-bold text-blue-600">50,000+</div>
+                    <div class="text-gray-700">Scholarships Allocated</div>
+                </div>
+            </div>
+
+            <!-- Blockchain Ticker -->
+            <div class="max-w-4xl mx-auto bg-white/90 p-4 rounded-xl shadow-lg backdrop-blur-md mb-12 overflow-hidden relative">
+                <div class="animate-marquee flex gap-8 whitespace-nowrap">
+                    <span class="text-blue-600">🔗 Block #89456 Verified</span>
+                    <span class="text-green-600">📜 SC/ST Allocation Contract Deployed</span>
+                    <span class="text-purple-600">🎓 12 New Scholarships Added</span>
+                </div>
+            </div>
+
+            <button class="bg-gradient-to-r from-blue-600 to-teal-400 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg transform hover:scale-105 transition">
+                Check Eligibility with DID
+            </button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="relative z-10 py-20">
+        <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2 relative border-t-4 border-blue-600">
+                <div class="w-16 h-16 bg-blue-100 rounded-2xl mb-4 flex items-center justify-center animate-spin-slow">
+                    <svg class="w-8 h-8 text-blue-600"><!-- Blockchain Icon --></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-blue-800">Immutable Records</h3>
+                <p class="text-gray-600">All allocations stored permanently on blockchain</p>
+            </div>
+            <!-- Add other features similarly -->
+        </div>
+    </section>
+
+    <!-- Scholarship Listings -->
+    <section class="relative z-10 py-20 bg-gradient-to-t from-gray-100 to-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center text-blue-700 uppercase tracking-wide">Current Opportunities</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="font-bold text-blue-900">SC/ST Technical Grant</h4>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">Active</span>
+                    </div>
+                    <div class="space-y-2 text-gray-600">
+                        <p>📅 Deadline: 15 Aug 2024</p>
+                        <p>💸 Amount: ₹2,00,000</p>
+                    </div>
+                </div>
+                <!-- Add more scholarships here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Particles Animation -->
+    <div id="particles" class="fixed inset-0 z-0 pointer-events-none"></div>
+
+    <script>
+        particlesJS('particles', {
+            particles: {
+                number: { value: 80 },
+                color: { value: '#00bcd4' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5 },
+                size: { value: 3 },
+                move: { enable: true, speed: 2 }
+            }
+        });
+
+        // Custom Animations
+        document.querySelectorAll('.animate-float').forEach(el => {
+            el.style.animation = 'float 3s ease-in-out infinite';
+        });
+
+        document.querySelectorAll('.animate-marquee').forEach(el => {
+            el.style.animation = 'tickerFlow 30s linear infinite';
+        });
+
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes float {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-15px); }
+            }
+            @keyframes tickerFlow {
+                from { transform: translateX(0); }
+                to { transform: translateX(-50%); }
+            }
+            .animate-spin-slow {
+                animation: spin 8s linear infinite;
+            }
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+
+</html>
